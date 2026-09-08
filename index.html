@@ -1,1 +1,94 @@
-<!DOCTYPE html> <html lang="ru"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Громгор</title> <style> * { box-sizing: border-box; } body { margin: 0; min-height: 100vh; background: #000; color: #aaa; display: flex; justify-content: center; align-items: center; font-family: sans-serif; } .content { display: flex; flex-direction: column; align-items: center; text-align: center; } .spell { font-size: 28px; letter-spacing: 4px; line-height: 1.5; } .sound-button { margin-top: 110px; padding: 0; border: 0; background: transparent; cursor: pointer; -webkit-tap-highlight-color: transparent; transition: transform 0.08s ease; } .sound-button:active { transform: scale(0.90); } .sound-button img { display: block; width: 90px; height: 90px; object-fit: contain; } </style> </head> <body> <div class="content"> <div class="spell"> осдббм твуоле дошгэт аюуука йла </div> <button class="sound-button" id="soundButton" aria-label="Запустить звук"> <img src="0023.jpg" alt=""> </button> </div> <audio id="audio" loop> <source src="secret.mp3.mp3" type="audio/mpeg"> </audio> <script> const button = document.getElementById("soundButton"); const audio = document.getElementById("audio"); button.addEventListener("click", () => { if (audio.paused) { audio.play(); } else { audio.pause(); } }); </script> </body> </html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Громгор</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #000;
+      color: #aaa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      font-family: sans-serif;
+    }
+
+    .content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .spell {
+      white-space: nowrap;
+      font-size: clamp(12px, 4.8vw, 28px);
+      letter-spacing: 2px;
+    }
+
+    .sound-button {
+      margin-top: 110px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      transition: transform 0.08s ease;
+    }
+
+    .sound-button:active {
+      transform: scale(0.90);
+    }
+
+    .sound-button img {
+      display: block;
+      width: 85px;
+      height: 85px;
+      object-fit: contain;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="content">
+
+    <div class="spell">
+      осдббм твуоле дошгэт аюуука йла
+    </div>
+
+    <button class="sound-button" id="soundButton" aria-label="Запустить звук">
+      <img src="0024.jpg" alt="">
+    </button>
+
+  </div>
+
+  <audio id="audio" loop>
+    <source src="secret.mp3.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    const button = document.getElementById("soundButton");
+    const audio = document.getElementById("audio");
+
+    button.addEventListener("click", () => {
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    });
+  </script>
+
+</body>
+</html>
